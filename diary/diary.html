@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryana Calendars | 2026 Full Collection</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-purple: #4B1F7A;
+            --soft-peach: #F4A896;
+            --light-peach: #FDE2D5;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-purple), #2a1045);
+            min-height: 100vh;
+            color: var(--light-peach);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 40px 0;
+            text-align: center;
+            color: var(--soft-peach);
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s ease;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(244, 168, 150, 0.2);
+            color: var(--light-peach);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--soft-peach);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+        }
+
+        .price {
+            color: var(--soft-peach);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-left: 5px;
+        }
+
+        .rating { color: #ffc107; font-size: 0.75rem; margin-bottom: 5px; }
+
+        .btn-theme {
+            background-color: var(--soft-peach);
+            color: var(--primary-purple) !important;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .btn-outline-theme {
+            border: 1px solid var(--soft-peach);
+            color: var(--soft-peach);
+            border-radius: 10px;
+        }
+
+        .glass-modal {
+            background: rgba(75, 31, 122, 0.95) !important; 
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--soft-peach);
+            border-radius: 25px;
+            color: var(--light-peach);
+        }
+
+        .form-control {
+            background: rgba(253, 226, 213, 0.1);
+            border: 1px solid rgba(244, 168, 150, 0.3);
+            color: rgb(218, 100, 100) !important;
+        }
+
+        
+    </style>
+</head>
+<body>
+       <!-- diary -->
+<div class="header">
+    <h1><i class="fa fa-book"></i> Ryana Diaries</h1>
+</div>
+<!-- card1 -->
+<div class="container pb-5">
+    <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D1.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Pastel Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Soft pastel diaries.</p>
+                    <div class="mt-auto">
+                      <span class="price">Rs. 699</span><span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Pastel Diary', 'Rs. 699', 'D1.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Pastel Diary', 'D1.jpg', 'Soft pastel diaries perfect for journaling, school notes, planning, and creative writing with aesthetic cover and smooth high quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D2.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Galaxy Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Galaxy themed diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 699</span><span class="old-price">Rs. 1099</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Galaxy Diary', 'Rs. 699', 'D2.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Galaxy Diaryr', 'D2.jpg', 'Galaxy themed diary with cosmic design, perfect for journaling, notes, planning, and creative writing with smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D3.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Cute Heart Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Adorable cute heart diary.</p>
+                    <div class="mt-auto">
+                                 <span class="price">Rs. 549</span><span class="old-price">Rs. 849</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Cute Heart Diary', 'Rs. 549', 'D3.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Cute Heart Diary', 'D3.jpg', 'Adorable cute heart diary for journaling, notes, love thoughts, and planning with soft aesthetic cover and daily thoughts with smooth premium quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D4.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Elegant Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Stylish elegant diary.</p>
+                    <div class="mt-auto">
+                      <span class="price">Rs. 649</span> <span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Elegant Diary', 'Rs. 649', 'D4.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Elegant Diary', 'D4.jpg', 'Stylish elegant diary for journaling, planning, notes, and daily writing with premium cover design and daily thoughts with smooth premium quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D6.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Moon Light Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Beautiful moonlight diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 699</span><span class="old-price">Rs. 1099</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Moon Light Diary', 'Rs. 699', 'D6.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Moon Light Diary', 'D6.jpg', 'Beautiful moonlight diary for journaling, dreams, notes, and planning with calming night sky design and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D7.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Pink Girls Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Cute pink girl diary.</p>
+                    <div class="mt-auto">
+                      <span class="price">Rs. 599</span><span class="old-price">Rs. 899</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Pink Girls Diary', 'Rs. 599', 'D7.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Pink Girls Diary', 'D7.jpg', 'Cute pink girl diary for journaling, school notes, planning, and daily thoughts with aesthetic cover and smooth premium quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D8.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Soft Plush Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Soft plush diary with cozy cover.</p>
+                    <div class="mt-auto">
+                      <span class="price">Rs. 799</span><span class="old-price">Rs. 1199</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Soft Plush Diary', 'Rs. 799', 'D8.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Soft Plush Diary', 'D8.jpg', 'Soft cute plush diary with cozy cover, perfect for journaling, notes, planning, and daily writing with smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card8 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D9.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Customizable Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Fully customizable diary.</p>
+                    <div class="mt-auto">
+                       <span class="price">Rs. 699</span><span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Customizable Diary', 'Rs. 699', 'D9.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Customizable Diary', 'D9.jpg', 'Fully customizable diary for names, designs, and ideas, perfect for journaling, planning, notes, and daily writing with smooth quality pages for everyday use.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card9 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D10.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Daily Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Simple daily diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 499</span><span class="old-price">Rs. 799</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Daily Diary', 'Rs. 499', 'D10.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Daily Diary', 'D10.jpg', 'Simple daily diary for routine journaling, notes, planning, and thoughts with clean layout and smooth premium quality pages for everyday use.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card10 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D11.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Office Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Professional office diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 699</span><span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Office Diary', 'Rs. 699', 'D11.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Office Diary', 'D11.jpg', 'Professional office diary for meetings, schedules, notes, and planning with clean layout and premium quality pages for daily business use.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card11 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D12.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Fun Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Colorful fun diary.</p>
+                    <div class="mt-auto">
+                       <span class="price">Rs. 549</span><span class="old-price">Rs. 849</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Fun Diary', 'Rs. 549', 'D12.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Fun Diary', 'D12.jpg', 'Colorful fun diary for journaling, doodles, notes, and daily thoughts with playful design and smooth premium quality pages for creativity.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card12 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D13.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Simple Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Clean and simple diary.</p>
+                    <div class="mt-auto">
+                          <span class="price">Rs. 399</span><span class="old-price">Rs. 649</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Simple Diary', 'Rs. 399', 'D13.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Simple Diary', 'D13.jpg', 'Clean and simple diary for everyday notes, journaling, planning, and writing with minimal design and smooth quality pages for use.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card13 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D14.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Cartoon Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Fun cartoon character diary.</p>
+                    <div class="mt-auto">
+                         <span class="price">Rs. 599</span><span class="old-price">Rs. 899</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Cartoon Character Diary', 'Rs. 599', 'D14.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Cartoon Character Diary', 'D14.jpg', 'Fun cartoon character diary for kids and teens, perfect for journaling, notes, doodles, and creativity with colorful smooth premium pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card14 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D15.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Dream Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Beautiful dream diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 649</span><span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Dream Diary', 'Rs. 649', 'D15.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Dream Diary', 'D15.jpg', 'Beautiful dream diary for recording thoughts, goals, journaling, and imagination with soft aesthetic cover and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card15 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D17 .jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Floral Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Elegant floral diary.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 599</span><span class="old-price">Rs. 899</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Floral Diary', 'Rs. 599', 'D17 .jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Floral Diary', 'D17 .jpg', 'Elegant floral diary for journaling, notes, planning, and daily writing with beautiful flower design cover and smooth premium quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card16 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D18.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Christmas Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Festive Christmas diary.</p>
+                    <div class="mt-auto">
+                       <span class="price">Rs. 699</span><span class="old-price">Rs. 1099</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Christmas Diary', 'Rs. 699', 'D18.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Christmas Diary', 'D18.jpg', 'Festive Christmas diary for journaling, holiday notes, memories, and planning with winter themed cover and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card17 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D19.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Unicorn Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Magical unicorn diary.</p>
+                    <div class="mt-auto">
+                       <span class="price">Rs. 649</span><span class="old-price">Rs. 999</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Unicorn Diary', 'Rs.  649', 'D19.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Unicorn Diary', 'D19.jpg', 'Magical unicorn diary for kids and teens, perfect for journaling, notes, doodles, and creativity with colorful dreamy premium quality pages.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card18 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="D21.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Aesthetic Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Minimal aesthetic diary.</p>
+                    <div class="mt-auto">
+                     <span class="price">Rs. 599</span><span class="old-price">Rs. 899</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Aesthetic Diary', 'Rs. 599', 'D21.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Aesthetic Diary', 'D21.jpg', 'Minimal aesthetic diary for journaling, notes, planning, and daily thoughts with stylish modern cover and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card19 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="diary.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Vintage Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Classic vintage diary.</p>
+                    <div class="mt-auto">
+                    <span class="price">Rs. 699</span><span class="old-price">Rs. 1099</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Vintage Diary', 'Rs. 699', 'diary.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Vintage Diary', 'diary.jpg', 'Classic vintage diary for journaling, notes, planning, and memories with antique style cover and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card20 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="d.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Personal Diary</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Personal diary for daily.</p>
+                    <div class="mt-auto">
+                       <span class="price">Rs. 599</span><span class="old-price">Rs. 899</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Personal Diary', 'Rs. 599', 'd.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Personal Diary', 'd.jpg', 'Personal diary for daily journaling, thoughts, planning, and memories with secure feel, simple design, and smooth premium quality pages inside.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-modal border-0">
+            <div class="modal-body p-0">
+                <div class="row g-0">
+                    <div class="col-md-5"><img id="modalImg" src="" class="img-fluid h-100 w-100" style="object-fit: cover;"></div>
+                    <div class="col-md-7 p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h2 class="fw-bold" id="modalTitle"></h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <h4 class="price mb-4" id="modalPrice"></h4>
+                        <form onsubmit="event.preventDefault(); submitOrder();">
+                            <div class="mb-3"><label class="small fw-bold">Full Name</label><input type="text" class="form-control" required></div>
+                            <div class="mb-3"><label class="small fw-bold">Email</label><input type="email" class="form-control" required></div>
+                            <button type="submit" class="btn btn-theme w-100 py-2 mt-2">Confirm Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detailsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-modal p-4">
+            <div class="d-flex justify-content-between mb-3">
+                <h2 class="fw-bold" id="detTitle"></h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-5"><img id="detImg" src="" class="img-fluid rounded-4 shadow"></div>
+                <div class="col-md-7 mt-3 mt-md-0">
+                    <p id="detDesc" class="fs-5"></p>
+                    <hr style="border-color: var(--soft-peach)">
+                    <p><strong>Paper:</strong> 300 GSM Premium Matte</p>
+                    <p><strong>Size:</strong> 12" x 18" (A3 Standard)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glass-modal text-center p-5">
+            <i class="fa fa-check-circle mb-4" style="font-size: 70px; color: var(--soft-peach);"></i>
+            <h2 class="fw-bold">Order Received!</h2>
+            <p>Your calendar will be shipped within 24 hours.</p>
+            <button class="btn btn-theme mt-3 px-5" data-bs-dismiss="modal">Excellent</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    const detailsModal = new bootstrap.Modal(document.getElementById('detailsModal'));
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+    function openOrderModal(t, p, i) {
+        document.getElementById('modalTitle').innerText = t;
+        document.getElementById('modalPrice').innerText = p;
+        document.getElementById('modalImg').src = i;
+        orderModal.show();
+    }
+
+    function openDetailsModal(t, i, d) {
+        document.getElementById('detTitle').innerText = t;
+        document.getElementById('detImg').src = i;
+        document.getElementById('detDesc').innerText = d;
+        detailsModal.show();
+    }
+
+    function submitOrder() {
+        orderModal.hide();
+        setTimeout(() => { successModal.show(); }, 400);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1117 @@
+/* =========================
+   PROFESSIONAL NAVBAR STYLE
+========================= */
+
+/* Navbar Background */
+.navbar{
+    background: linear-gradient(90deg, #5a189a, #7b2cbf);
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+/* 1. Removes the thick caret arrow that looked like a bold underline */
+  .no-arrow::after {
+      display: none !important;
+  }
+  
+  /* 2. Forces 'Price List' to match the font weight of the other links perfectly */
+  #priceListDropdown {
+      font-weight: inherit !important;
+      text-decoration: none !important;
+  }
+/* Logo Image */
+.navbar-brand img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: 0.3s ease;
+}
+
+/* Logo Hover */
+.navbar-brand img:hover{
+    transform: scale(1.08);
+}
+
+/* Brand Text */
+.navbar-brand{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 0.5px;
+    gap: 12px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link{
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 6px;
+    padding: 10px 18px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover{
+    background: rgba(255,255,255,0.15);
+    color: #ffd6ff !important;
+    transform: translateY(-2px);
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active{
+    background: rgba(255,255,255,0.2);
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Underline Animation */
+.navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: 5px;
+    width: 0%;
+    height: 2px;
+    background: #ffd6ff;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after{
+    width: 60%;
+}
+
+/* Contact Button */
+.contact-btn{
+    background: #ffffff;
+    color: #5a189a;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover{
+    background: #f3d5ff;
+    color: #3c096c;
+    transform: translateY(-2px);
+}
+
+/* Icons */
+.nav-icon{
+    color: white;
+    font-size: 24px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-icon:hover{
+    color: #ffd6ff;
+    transform: scale(1.15);
+}
+
+/* Navbar Toggler */
+.navbar-toggler{
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* Mobile Menu */
+@media (max-width: 991px){
+
+    .navbar-collapse{
+        background: #5a189a;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .navbar-nav{
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link{
+        margin: 8px 0;
+    }
+
+    .contact-btn{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .d-flex.align-items-center{
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+/*Contact Us MODAL DESIGN */
+
+.contact-btn{
+    background:rgba(255, 255, 255, 0.326);
+    color:white;
+    border:none;
+    padding:8px 18px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+.contact-btn:hover{
+    background:rgb(222, 142, 167);
+    color:#5a189a;
+}
+
+/* Modal Main Box */
+.modal-content{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+/* Modal Header */
+.modal-header{
+    background:#5a189a;
+    color:white;
+}
+
+/* Input Fields */
+.form-control{
+    border-radius:10px;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+/* Input Focus */
+.form-control:focus{
+    border-color:#5a189a;
+    box-shadow:0 0 5px rgba(90,24,154,0.4);
+}
+
+/* Send Button */
+.btn-purple{
+    background:#5a189a;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+/* Button Hover */
+.btn-purple:hover{
+    background:rgb(222, 142, 167);
+    color:#5a189a;
+}
+
+/* Custom styles for the Login Modal */
+.custom-login-btn {
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.custom-login-btn:hover {
+    background-color: #222 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Subtle border color change on text box focus */
+#loginModal .input-group:focus-within .input-group-text,
+#loginModal .input-group:focus-within .form-control {
+    border-color: #5a189a !important;
+}
+
+.hover-underline:hover {
+    text-decoration: underline !important;
+}
+
+/* Purple Sign-in Button Styles */
+.custom-purple-btn {
+    background-color: #6f42c1;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.custom-purple-btn:hover {
+    background-color: #5a32a3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.25) !important;
+}
+
+/* Purple Link Color Styling */
+.purple-link {
+    color: #6f42c1;
+}
+.purple-link:hover {
+    color: #4b228b;
+}
+
+/* Form Fields Interactive Purple Focus */
+#loginModal .input-group:focus-within .input-group-text,
+#loginModal .input-group:focus-within .form-control {
+    border-color: #6f42c1 !important;
+}
+
+/* Custom Checkbox Focus */
+.custom-checkbox:checked {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+.custom-checkbox:focus {
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+    border-color: #6f42c1;
+}
+
+.hover-underline:hover {
+    text-decoration: underline !important;
+}
+
+<style>
+  .modal-result-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .modal-result-card:hover {
+    border-color: #6f42c1;
+    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.1);
+  }
+  .modal-result-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  .btn-view-modal {
+    background-color: #f3eefc;
+    color: #6f42c1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  .btn-view-modal:hover {
+    background-color: #6f42c1;
+    color: #fff;
+  }
+</style>
+
+
+/* Hero Section Styles */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+    /* Soft watercolor background effect */
+    background: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Typography */
+.tagline {
+    color: #4a148c;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.script-text {
+    font-family: 'Dancing Script', cursive;
+    color: #6a1b9a;
+    font-size: 4rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #4a148c;
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 20, 140, 0.3);
+}
+
+.btn-secondary {
+    border: 2px solid #4a148c;
+    color: #4a148c;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Product Image & Shadows */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+    /* This creates the realistic shadow around the shapes of the pens/books */
+    filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.15));
+     border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+     transform: perspective(1000px) rotateY(-5deg);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-group {
+        justify-content: center;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .script-text {
+        font-size: 3rem;
+    }
+}
+.nav-icon {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-icon:hover {
+  color: #F4A896;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #F4A896;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base Styling */
+.feature-box {
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease; /* Transition for the pseudo-class animation */
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 1. Pseudo-class :hover on the Box */
+.feature-box:hover {
+    transform: translateY(-10px); /* Lifts the card */
+    box-shadow: 0 15px 30px rgba(75, 31, 122, 0.1);
+}
+
+/* 2. Pseudo-class :hover on the Icon */
+.feature-box:hover .icon-circle {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+}
+
+/* 3. Pseudo-element :after to create a bottom accent line on hover */
+.feature-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #4B1F7A;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+
+/* Icon Styles */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.purple { background-color: #4B1F7A; }
+.pink { background-color: #F4A896; }
+.yellow { background-color: #FBC02D;  }
+.green { background-color: #6DBE45; }
+
+/* Core Grid Section Fixes */
+.features-section .row {
+  display: flex;
+  align-items: stretch; /* Forces equal height columns in the row */
+}
+
+/* Feature Box Layout */
+.feature-box {
+  background: #ffffff;
+  border: 1px solid #eef0f5;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Flexbox settings for uniform sizing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;  
+  min-height: 220px; /* Ensures structural integrity on mobile displays */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography Harmony */
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+/* Color Circles Configurations */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* Palette Variations */
+.icon-circle.purple { background-color: #f3e8ff; color: #7c3aed; }
+.icon-circle.pink   { background-color: #fce7f3; color: #db2777; }
+.icon-circle.yellow { background-color: #fef9c3; color: #ca8a04; }
+.icon-circle.green  { background-color: #dcfce7; color: #16a34a; }
+
+/* 3D Calendar Transform */
+.calendar-3d-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    transform: perspective(1000px) rotateY(-8deg);
+    border: 1px solid #eee;
+    transition: transform 0.5s ease;
+}
+
+.calendar-3d-card:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Grid setup remains the same as previous step */
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; color: #4B1F7A; }
+.today { background: #4B1F7A; color: white; border-radius: 5px; }
+/* Categories sec */
+:root {
+            --brand-purple: #4B1F7A;
+            --soft-peach: #F4A896;
+            --light-peach: #FDE2D5;
+            
+} ; ;
+        
+
+        body {
+            background-color: #c76e6e;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Widening the container for a premium look */
+        @media (min-width: 1200px) {
+            .container-wide {
+                max-width: 1350px;
+            }
+        }
+
+        /* Top Header Section */
+        .collection-header {
+            padding: 60px 0 30px 0;
+            background-color:radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+} ; ;
+        
+        
+
+        .collection-header h2 {
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        /* Card Styling */
+        .category-card {
+            border: 1px solid #efefef;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Ensures all cards are same size */
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .img-wrapper {
+            background-color: #f9f9f9;
+            height: 250px; /* Fixed height for image section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f3f3f3;
+            overflow: hidden;
+        }
+
+        .img-wrapper img {
+            max-width: 65%;
+            transition: transform 0.4s ease;
+        }
+
+        /* Centered Overlap Badge */
+        .badge-positioner {
+            margin-top: -15px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .type-badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Colors matching video categories */
+        .bg-journal { background-color: #E1F5FE; color: #4B1F7A; }
+        .bg-books   { background-color: #E8F5E9; color: #f181a7; }
+        .bg-diary   { background-color: #F3E5F5; color: #7B1FA2; }
+        .bg-wallcal { background-color: #FFFDE7; color: #f181a7; }
+
+        /* Card Content Alignment */
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 20px;
+            flex-grow: 1; /* Pushes button to the bottom */
+        }
+
+        .btn-features {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-features:hover {
+            background-color: var(--brand-purple);
+            color: #fff;
+        }
+
+        /* Carousel Arrows */
+        .carousel-control-prev, .carousel-control-next {
+            width: 50px;
+            filter: invert(1);
+        }
+        body {
+    /* Standard font and color settings */
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    
+    /* Applying your specific radial gradient theme */
+    background: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+    
+    /* Ensures the background stays fixed while scrolling */
+    background-attachment: fixed;
+    
+    /* Fallback color if gradients fail to load */
+    background-color: #fff; 
+    
+    /* Ensures the background covers the full height of the viewport */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Footer Start */
+/* --- Brand Palette Variables --- */
+:root {
+  --primary-purple: #4B1F7A;
+  --soft-peach: #F4A896;
+  --light-peach: #FDE2D5;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Footer Master Base --- */
+footer {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, #250b40 100%);
+  color: #ffffff;
+  padding: 60px 0 30px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Glassmorphic Container Box --- */
+footer .container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 45px 35px 30px 35px;
+  max-width: 1320px; /* Gives the container ample room to display columns inline */
+}
+
+/* --- Flexbox One-Line Row Layout --- */
+.footer-main-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Forces everything strictly onto one single line */
+  gap: 20px;
+}
+
+/* --- Precise Column Width Allocations --- */
+.footer-col-about { flex: 0 0 22%; min-width: 180px; }
+.footer-col { flex: 0 0 12%; min-width: 110px; }
+.footer-col-contact { flex: 0 0 22%; min-width: 200px; }
+.footer-col-newsletter { flex: 0 0 22%; min-width: 210px; }
+
+/* --- Typography Setup --- */
+footer h5 {
+  color: var(--soft-peach);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+footer .footer-text {
+  color: var(--light-peach);
+  opacity: 0.8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* --- Navigation & Links --- */
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+footer ul li a:hover {
+  color: var(--soft-peach);
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* --- Contact & Modal Link Wrapping Fixes --- */
+.footer-contact-list li {
+  font-size: 0.88rem;
+  color: var(--light-peach);
+  opacity: 0.9;
+  margin-bottom: 10px;
+  word-break: break-word; /* Wraps email addresses safely if space shrinks */
+}
+
+.footer-contact-list li i {
+  color: var(--soft-peach);
+  margin-right: 6px;
+}
+
+.btn-custom-contact {
+  background-color: var(--soft-peach);
+  color: var(--primary-purple) !important;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 14px;
+  border: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-contact:hover {
+  background-color: var(--light-peach);
+  transform: translateY(-2px);
+}
+
+/* --- Newsletter Input Fields --- */
+.footer-input {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: #ffffff !important;
+  border-radius: 8px 0 0 8px !important;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  height: 38px;
+}
+
+.footer-input::placeholder {
+  color: rgba(253, 226, 213, 0.4);
+}
+
+.footer-input:focus {
+  border-color: var(--soft-peach) !important;
+  box-shadow: none !important;
+}
+
+.btn-newsletter-submit {
+  background: var(--soft-peach);
+  color: var(--primary-purple);
+  border-radius: 0 8px 8px 0;
+  padding: 0 14px;
+  border: none;
+  height: 38px;
+  transition: background 0.2s;
+}
+
+/* --- Footer Spacers & Elements --- */
+.footer-divider {
+  border-top: 1px solid var(--glass-border);
+  opacity: 1;
+  margin: 35px 0 20px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: #ffffff !important;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icons a:hover {
+  background: var(--soft-peach);
+  color: var(--primary-purple) !important;
+  transform: translateY(-3px);
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: var(--light-peach);
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+/* --- Responsive Adaptability for Tablet and Mobile devices --- */
+@media (max-width: 992px) {
+  .footer-main-row {
+    flex-wrap: wrap; /* Allows sections to wrap cleanly into grids on small mobile screens */
+    gap: 30px;
+  }
+  .footer-col-about, .footer-col-contact, .footer-col-newsletter {
+    flex: 0 0 45%;
+  }
+  .footer-col {
+    flex: 0 0 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-col-about, .footer-col, .footer-col-contact, .footer-col-newsletter {
+    flex: 0 0 100%;
+  }
+}
+
+/* About */
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, #47236e 100%);
+  /* This makes the section take up 100% of the browser's view height */
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure the row inside fills the full height of the hero */
+.about-hero .row {
+  min-height: 100vh;
+  align-items: center;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 80vh; /* Keeps image proportional but tall */
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(214, 153, 153, 0.3);
+}
+
+/* story */
+/* 1. Main Section Container */
+.about-story-section {
+    padding: 80px 0;
+    background-color: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+    overflow: hidden; /* Ensures no content leaks out */
+}
+
+/* 2. Image Frame: This creates the "anchor" for the design */
+.about-image-frame {
+    position: relative;
+    padding: 30px 0 0 30px; /* Provides space for the background layer offset */
+    width: 100%;
+}
+
+/* 3. The Image: Stays on top (z-index: 2) */
+.visual-display-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+
+/* 5. Text Styling */
+.brand-heading {
+    color: #4B1F7A;
+    font-weight: 700;
+}
+
+.story-p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 6. Spec Badges */
+.badge-spec-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+    padding: 15px;
+    border-radius: 12px;
+    color: #4B1F7A;
+    font-weight: 600;
+}
+/* --- Values Section Styling --- */
+.about-values-section {
+    background-color: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);
+    padding: 80px 0;
+}
+
+.glass-value-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.glass-value-card:hover {
+    border-color: var(--soft-peach);
+    box-shadow: 0 10px 25px rgba(75, 31, 122, 0.1);
+}
+
+.glass-value-card h3 {
+    color: var(--primary-purple); /* Dark Purple */
+    font-weight: 600;
+    margin: 20px 0 15px;
+}
+
+.glass-value-card p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.value-icon {
+    font-size: 2rem;
+    color: var(--soft-peach); /* Soft Peach accent */
+}
+
+/* --- FAQ Section Styling --- */
+.faq-section {
+    padding: 80px 0;
+   background-color: radial-gradient(circle at top left, #bd69ca 0%, transparent 40%),
+                radial-gradient(circle at bottom right, #f181a7 0%, transparent 40%);}
+
+.accordion-item {
+    border: 1px solid #eee;
+    border-radius: 12px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    color: var(--primary-purple) !important;
+    font-weight: 600;
+    background-color: #ffffff !important;
+    padding: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--light-peach) !important;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: hue-rotate(180deg); /* Adjusts icon color to match purple */
+}
+
+.accordion-body {
+    color: #555;
+    line-height: 1.7;
+    padding: 20px;
+}
+/* animation */
+/* --- Footer Social Media Icons Fix --- */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: var(--soft-peach);
+  color: var(--primary-purple);
+  transform: translateY(-3px);
+}
+
+/* Removes the arrow/caret icon next to the Price List link */
+.custom-dropdown::after {
+    display: none !important;
+}

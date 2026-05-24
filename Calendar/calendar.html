@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryana Calendars | 2026 Full Collection</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-purple: #4B1F7A;
+            --soft-peach: #F4A896;
+            --light-peach: #FDE2D5;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary-purple), #2a1045);
+            min-height: 100vh;
+            color: var(--light-peach);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 40px 0;
+            text-align: center;
+            color: var(--soft-peach);
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s ease;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(244, 168, 150, 0.2);
+            color: var(--light-peach);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--soft-peach);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+        }
+
+        .price {
+            color: var(--soft-peach);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-left: 5px;
+        }
+
+        .rating { color: #ffc107; font-size: 0.75rem; margin-bottom: 5px; }
+
+        .btn-theme {
+            background-color: var(--soft-peach);
+            color: var(--primary-purple) !important;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .btn-outline-theme {
+            border: 1px solid var(--soft-peach);
+            color: var(--soft-peach);
+            border-radius: 10px;
+        }
+
+        .glass-modal {
+            background: rgba(75, 31, 122, 0.95) !important; 
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--soft-peach);
+            border-radius: 25px;
+            color: var(--light-peach);
+        }
+
+        .form-control {
+            background: rgba(253, 226, 213, 0.1);
+            border: 1px solid rgba(244, 168, 150, 0.3);
+            color: rgb(218, 100, 100) !important;
+        }
+
+        
+    </style>
+</head>
+<body>
+       <!-- calendar -->
+<div class="header">
+    <h1><i class="fa fa-calendar-check"></i> Ryana Calendars</h1>
+</div>
+<!-- card1 -->
+<div class="container pb-5">
+    <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wall1.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Floral Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Beautiful floral wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Floral Wall Calendar', 'Rs. 299', 'wall1.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Floral Wall Calendar', 'wall1.jpg', 'Beautiful floral wall calendar perfect for home, office, tracking schedules, and adding aesthetic decoration to walls.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wall2.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Cute Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Adorable wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Cute Wall Calendar', 'Rs. 299', 'wall2.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Cute Wall Calendar', 'wall2.jpg', 'Adorable wall calendar perfect for tracking dates, planning schedules, organizing tasks, and adding a cute aesthetic to any room.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wall3.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Simple Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Clean and simple wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 349</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Simple Wall Calendar', 'Rs. 349', 'wall3.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Simple Wall Calendar', 'wall3.jpg', 'Clean and simple wall calendar perfect for daily planning, date tracking, office use, home, and easy schedule management.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wall4.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Office Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Professional office wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Office Wall Calendar', 'Rs. 299', 'wall4.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Office Wall Calendar', 'wall4.jpg', 'Professional office wall calendar perfect for tracking meetings, deadlines, schedules, and maintaining daily workplace organization.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wc8.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Elegant Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">An premium wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Elegant Wall Calendar', 'Rs. 299', 'wc8.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Elegant Wall Calendar', 'wc8.jpg', 'An elegant and premium wall calendar with a clean, classy design. Perfect for modern homes, offices, and stylish spaces.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>()
+        </div>
+<!-- card6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wc37.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Royal Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">A calendar with an elegant design.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 349</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Royal Wall Calendar', 'Rs. 349', 'wc37.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Royal Wall Calendar', 'wc37.jpg', 'A royal wall calendar with an elegant luxury design. Perfect for classy home or office decor with a rich and sophisticated look.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wall1.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Scenery Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">A scenery wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 599</span><span class="old-price">Rs. 699</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Scenery Wall Calendar', 'Rs. 599', 'wall1.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Scenery Wall Calendar', 'wall1.jpg', 'A scenery wall calendar featuring nature views like mountains, rivers, and landscapes. Perfect for a fresh vibe in your room or office')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card8 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="1.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Summer Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Summer themed desk calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 199</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Summer Desk Calendar', 'Rs. 299', '1.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Summer Desk Calendar', '1.jpg', 'Bright summer themed desk calendar perfect for daily planning, study schedules, task tracking, and stylish table decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card9 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wc24.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Cat Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">A cute cat-themed wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 399</span><span class="old-price">Rs. 499</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Cat Wall Calendar', 'Rs. 399', 'wc24.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Cat Wall Calendar', 'wc24.jpg', 'A cute cat-themed wall calendar with playful and adorable designs. Perfect for cat lovers and adding a fun, cozy vibe to your room.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card10 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="wc34.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Premium Wall Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">A premium wall calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 299</span><span class="old-price">Rs. 399</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Premium Wall Calendar', 'Rs. 299', 'wc34.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Premium Wall Calendar', 'wc34.jpg', 'A premium wall calendar with a clean, stylish, and high-quality design. Perfect for modern homes and professional office spaces.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card11 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk1.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Royal Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Elegant royal desk calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 399</span><span class="old-price">Rs. 499</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Royal Desk Calendar', 'Rs. 399', 'desk1.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Royal Desk Calendar', 'desk1.jpg', 'Elegant royal desk calendar perfect for premium office setup, daily planning, schedule tracking, and table decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card12 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk2.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Cute Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Cute and colorful desk calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 449</span><span class="old-price">Rs. 499</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Cute Desk Calendar', 'Rs. 449', 'desk2.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Cute Desk Calendar', 'desk2.jpg', 'Cute and colorful desk calendar perfect for daily planning, study schedules, office tasks, organization, and aesthetic table decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card13 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk3.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Elegant Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Stylish and elegant desk calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 449</span><span class="old-price">Rs. 599</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Elegant Desk Calendar', 'Rs. 449', 'desk3.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Elegant Desk Calendar', 'desk3.jpg', 'Stylish and elegant desk calendar perfect for office tables, daily planning, and professional workspace decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card14 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk4.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Pastel Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">pastel desk calendar perfect for planning.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 699</span><span class="old-price">Rs. 799</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Pastel Desk Calendar', 'Rs. 699', 'desk4.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Pastel Desk Calendar', 'desk4.jpg', 'Soft pastel desk calendar perfect for daily planning, study routine, office organization, task tracking, and aesthetic table decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card15 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk5.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Green Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Desk calendar for daily planning.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 699</span><span class="old-price">Rs. 799</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Green Desk Calendar', 'Rs. 699', 'desk5.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Green Desk Calendar', 'desk5.jpg', 'Fresh green desk calendar perfect for daily planning, study schedules, office organization, and clean aesthetic table setup.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card16 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="desk6.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Pink Desk Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Adds a cozy vibe to your room.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 449</span><span class="old-price">Rs. 699</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Pink Desk Calendar', 'Rs. 449', 'desk6.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Pink Desk Calendar', 'desk6.jpg', 'Beautiful pink desk calendar perfect for daily planning, study schedules, organization, and cute aesthetic table decoration.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card17 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="Digital6.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">White Digital Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Calendar for time management.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 449</span><span class="old-price">Rs. 499</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('White Digital Calendar', 'Rs. 449', 'Digital6.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('White Digital Calendar', 'Digital6.jpg', 'Modern white digital calendar perfect for time management, alarms, date tracking, office desk use, and smart daily organization.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card18 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="Digital4.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Brown Digital Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="small opacity-75">Professional layout.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 449</span><span class="old-price">Rs. 699</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Brown Digital Calendar', 'Rs. 449', 'Digital4.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Brown Digital Calendar', 'Digital4.jpg', 'Stylish brown digital calendar perfect for office desks, time tracking, reminders, and modern daily organization use.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card19 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="Digital7.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Pastel Digital Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Soft pastel digital calendar.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 499</span><span class="old-price">Rs. 599</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Pastel Digital Calendar', 'Rs. 499', 'Digital7.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Pastel Digital Calendar', 'Digital7.jpg', 'Soft pastel digital calendar perfect for modern planning, reminders, time management, and organization daily.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- card20 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img src="Digital9.jpg" alt="Product">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="fw-bold">Black Digital Calendar</h5>
+                    <div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+                    <p class="small opacity-75">Calendar perfect for offices.</p>
+                    <div class="mt-auto">
+                        <span class="price">Rs. 499</span><span class="old-price">Rs. 599</span>
+                        <div class="d-grid gap-2 mt-2">
+                            <button class="btn btn-theme btn-sm" onclick="openOrderModal('Black Digital Calendar', 'Rs. 499', 'Digital9.jpg')">Order Now</button>
+                            <button class="btn btn-outline-theme btn-sm" onclick="openDetailsModal('Black Digital Calendar', 'Digital9.jpg', 'Black digital calendar perfect for modern offices, reminders, schedule management, and stylish professional desk organization.')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-modal border-0">
+            <div class="modal-body p-0">
+                <div class="row g-0">
+                    <div class="col-md-5"><img id="modalImg" src="" class="img-fluid h-100 w-100" style="object-fit: cover;"></div>
+                    <div class="col-md-7 p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h2 class="fw-bold" id="modalTitle"></h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <h4 class="price mb-4" id="modalPrice"></h4>
+                        <form onsubmit="event.preventDefault(); submitOrder();">
+                            <div class="mb-3"><label class="small fw-bold">Full Name</label><input type="text" class="form-control" required></div>
+                            <div class="mb-3"><label class="small fw-bold">Email</label><input type="email" class="form-control" required></div>
+                            <button type="submit" class="btn btn-theme w-100 py-2 mt-2">Confirm Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="detailsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-modal p-4">
+            <div class="d-flex justify-content-between mb-3">
+                <h2 class="fw-bold" id="detTitle"></h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-5"><img id="detImg" src="" class="img-fluid rounded-4 shadow"></div>
+                <div class="col-md-7 mt-3 mt-md-0">
+                    <p id="detDesc" class="fs-5"></p>
+                    <hr style="border-color: var(--soft-peach)">
+                    <p><strong>Paper:</strong> 300 GSM Premium Matte</p>
+                    <p><strong>Size:</strong> 12" x 18" (A3 Standard)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glass-modal text-center p-5">
+            <i class="fa fa-check-circle mb-4" style="font-size: 70px; color: var(--soft-peach);"></i>
+            <h2 class="fw-bold">Order Received!</h2>
+            <p>Your calendar will be shipped within 24 hours.</p>
+            <button class="btn btn-theme mt-3 px-5" data-bs-dismiss="modal">Excellent</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+    const detailsModal = new bootstrap.Modal(document.getElementById('detailsModal'));
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+    function openOrderModal(t, p, i) {
+        document.getElementById('modalTitle').innerText = t;
+        document.getElementById('modalPrice').innerText = p;
+        document.getElementById('modalImg').src = i;
+        orderModal.show();
+    }
+
+    function openDetailsModal(t, i, d) {
+        document.getElementById('detTitle').innerText = t;
+        document.getElementById('detImg').src = i;
+        document.getElementById('detDesc').innerText = d;
+        detailsModal.show();
+    }
+
+    function submitOrder() {
+        orderModal.hide();
+        setTimeout(() => { successModal.show(); }, 400);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryana Calendars</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+      /* Prevents unwanted side-scrolling during slide animations */
+    }
+
+    /* Fallback: If AOS doesn't load instantly, make sure your site is still visible */
+    [data-aos] {
+      pointer-events: none;
+    }
+
+    .aos-animate {
+      pointer-events: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <!-- 1. BRAND LOGO -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="LOGO-rc.jpg" alt="Ryana Calendars Logo" style="height:50px; width:50px;">
+        Ryana Calendars
+      </a>
+
+      <!-- 2. ICONS (Kept outside collapse so they stay on screen for desktop AND mobile) -->
+<div class="d-flex align-items-center gap-3 order-lg-last ms-auto me-3 me-lg-0">
+  <!-- Updated Search Link to trigger the modal -->
+  <a href="#" class="nav-icon text-white fs-5" data-bs-toggle="modal" data-bs-target="#searchModal">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  <a href="cart.html" class="nav-icon text-white fs-5 position-relative">
+  <i class="fa-solid fa-cart-shopping"></i>
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
+    0
+  </span>
+</a>
+</div>
+
+      <!-- 3. MOBILE TOGGLER BUTTON -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- 4. COLLAPSIBLE MENU LINKS & BUTTONS -->
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Calendar/calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="diary/diary.html">Diary</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="stationery/stationery.html">stationery</a></li>
+          <li class="nav-item"><a class="nav-link" href="gift/gift.html">Gifts</a></li>
+
+          <!-- Price List Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle no-arrow" href="#" id="priceListDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Price List
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="priceListDropdown">
+              <li><a class="dropdown-item" href="Price List (1).pdf" target="_blank" rel="noopener noreferrer">👁️ View
+                  Price List</a></li>
+              <li><a class="dropdown-item" href="Price List (1).pdf" download="Ryana-Calendars-Price-List.pdf">📥
+                  Download PDF</a></li>
+            </ul>
+          </li>
+
+          <!-- Action Buttons (Login & Contact Us) -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header border-0">
+          <h4 class="modal-title fw-bold">Contact Ryana Calendars</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-purple w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+   <!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
+      
+      <!-- Modal Header (With Premium Purple Background Gradient) -->
+      <div class="modal-header p-4 border-0 position-relative" style="background: linear-gradient(135deg, #6f42c1, #4b228b); color: #ffffff;">
+        <div class="w-100 text-center">
+          <h4 class="modal-title fw-bold" id="loginModalLabel" style="letter-spacing: 0.5px;">Welcome Back</h4>
+          <p class="small mb-0 mt-1" style="color: #e2d5f3 !important; opacity: 0.9;">Please enter your details to sign in</p>
+        </div>
+        <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body p-4 p-md-5 bg-light">
+        <form action="#" method="POST">
+          
+          <!-- Email Input -->
+          <div class="mb-4">
+            <label for="loginEmail" class="form-label fw-semibold text-secondary small">Email Address</label>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0 text-muted input-icon-box" style="border-color: #dee2e6;"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" class="form-control border-start-0 ps-2" id="loginEmail" placeholder="name@example.com" required style="box-shadow: none; border-color: #dee2e6;">
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label fw-semibold text-secondary small">Password</label>
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0 text-muted input-icon-box" style="border-color: #dee2e6;"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" class="form-control border-start-0 ps-2" id="loginPassword" placeholder="••••••••" required style="box-shadow: none; border-color: #dee2e6;">
+            </div>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div class="d-flex justify-content-between align-items-center mb-4 small">
+            <div class="form-check">
+              <input class="form-check-input custom-checkbox" type="checkbox" id="rememberMe" style="cursor: pointer;">
+              <label class="form-check-label text-muted" for="rememberMe" style="cursor: pointer;">Remember me</label>
+            </div>
+            <a href="#" class="text-decoration-none fw-semibold purple-link hover-underline">Forgot Password?</a>
+          </div>
+
+          <!-- Sign In Button (Styled Purple) -->
+          <button type="submit" class="btn text-white w-100 py-2.5 fw-bold shadow-sm custom-purple-btn">
+            Sign In
+          </button>
+
+          <!-- Divider & Register Link -->
+          <div class="text-center mt-4">
+            <div class="position-relative d-flex align-items-center justify-content-center my-4">
+              <hr class="w-100 text-muted my-0">
+              <span class="position-absolute px-3 bg-light text-muted small fw-medium">OR</span>
+            </div>
+            <p class="mb-0 small text-muted">Don't have an account? <a href="#" class="fw-bold text-decoration-none purple-link hover-underline">Create an account</a></p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"> <div class="modal-content border-0 shadow-lg" style="border-radius: 16px; background-color: #fdfbfe;">
+      
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold text-secondary" id="searchModalLabel">Search Our Collection</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeSearchModalBtn"></button>
+      </div>
+      
+      <div class="modal-body p-4">
+        <form id="modalSearchForm" onsubmit="event.preventDefault();">
+          <div class="input-group mb-4">
+            <span class="input-group-text bg-white border-end-0 text-muted" style="border-color: #dee2e6;">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="search" id="modalSearchInput" class="form-control border-start-0 ps-2 py-2" placeholder="Search for journals, calendars, diaries..." required style="box-shadow: none; border-color: #dee2e6;">
+            <button type="submit" class="btn text-white px-4 fw-bold" style="background: linear-gradient(135deg, #6f42c1, #4b228b);">Go</button>
+          </div>
+        </form>
+
+        <div id="modalResultsContainer" class="mt-2">
+          <div id="searchPlaceholderHint" class="text-center text-muted py-3">
+            <p class="small mb-0">Type your keyword above (e.g., "Diary", "Calendar") and hit Go!</p>
+          </div>
+
+          <div class="row g-3" id="modalResultsGrid"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+        <p class="tagline">Plan Better. Write Better. Live Better.</p>
+        <h1 class="main-title">Your Everyday <br><span class="script-text">Planning Partner</span></h1>
+        <p class="description">Discover our exclusive range of Calendars, Diaries, Stationery and Gift Items — designed
+          to organize your life and inspire your day.</p>
+        <div class="button-group">
+          <a href="#collections" class="btn btn-secondary"> Shop Now &rarr;</a>
+          <a href="about.html" class="btn btn-secondary">About &rarr;</a>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+        <div class="image-wrapper">
+          <img src="hero-2.png" alt="Notebook and Stationery" class="product-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section py-5">
+    <div class="container-fluid px-lg-5">
+      <div class="row align-items-center g-5">
+
+        <!-- Features Grid (Left Column) -->
+        <div class="col-lg-8">
+          <div class="row g-4 text-center justify-content-center">
+
+            <!-- Box 1 -->
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-box h-100">
+                <div class="icon-circle purple"><i class="fa-solid fa-award"></i></div>
+                <h5 class="feature-title">Premium Quality</h5>
+                <p class="feature-desc m-0">Best quality products you can trust.</p>
+              </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-box h-100">
+                <div class="icon-circle pink"><i class="fa-solid fa-truck"></i></div>
+                <h5 class="feature-title">Fast Delivery</h5>
+                <p class="feature-desc m-0">On time delivery at your doorstep.</p>
+              </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-box h-100">
+                <div class="icon-circle yellow"><i class="fa-solid fa-tag"></i></div>
+                <h5 class="feature-title">Best Offers</h5>
+                <p class="feature-desc m-0">Exciting deals & discounts for you.</p>
+              </div>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-box h-100">
+                <div class="icon-circle green"><i class="fa-solid fa-lock"></i></div>
+                <h5 class="feature-title">Secure Shopping</h5>
+                <p class="feature-desc m-0">100% safe & secure payment.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Calendar Side (Right Column) -->
+<div class="col-lg-4" data-aos="zoom-in" data-aos-duration="800">
+  <div class="calendar-3d-wrapper">
+    <div class="calendar-3d-card shadow-lg">
+      
+      <div class="calendar-header">
+        <h4 class="m-0">MAY</h4>
+        <span class="year-badge">2026</span>
+      </div>
+
+      <div class="calendar-body">
+        <div class="calendar-grid">
+          <div class="day-label">S</div>
+          <div class="day-label">M</div>
+          <div class="day-label">T</div>
+          <div class="day-label">W</div>
+          <div class="day-label">T</div>
+          <div class="day-label">F</div>
+          <div class="day-label">S</div>
+          
+          <!-- May 2026 starts on a Friday, so 5 empty slots -->
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          <div class="empty"></div>
+          
+          <span>1</span><span>2</span>
+          <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+          <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+          <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span class="today">22</span><span>23</span>
+          <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+          <span>31</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div id="collections" class="container-wide collection-header text-center" data-aos="fade-up">
+
+    <h2>
+      Our Collections
+      <br>
+      <p class="text-muted">
+        Premium Journals, Diaries, and Calendars
+      </p>
+    </h2>
+
+  </div>
+
+  <div class="container-wide mb-5" data-aos="fade-up" data-aos-delay="150">
+
+    <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <!-- First Slide -->
+        <div class="carousel-item active">
+
+          <div class="row g-4">
+
+            <!-- Journal -->
+            <div class="col-6 col-md-3">
+
+              <div class="category-card shadow-sm">
+
+                <div class="img-wrapper">
+                  <img src="jour.webp" alt="Journal">
+                </div>
+
+                <div class="badge-positioner">
+                  <span class="type-badge bg-journal">Journal</span>
+                </div>
+
+                <div class="card-body text-center">
+
+                  <h5 class="card-title">Premium Executive</h5>
+
+                  <a href="journal/journal.html" class="btn btn-features">
+                    Features
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Stationery -->
+            <div class="col-6 col-md-3">
+
+              <div class="category-card shadow-sm">
+
+                <div class="img-wrapper">
+                  <img src="stationery-categories.jpg" alt="Stationery">
+                </div>
+
+                <div class="badge-positioner">
+                  <span class="type-badge bg-books">Stationery</span>
+                </div>
+
+                <div class="card-body text-center">
+
+                  <h5 class="card-title">Premium Executive</h5>
+
+                  <a href="stationery/stationery.html" class="btn btn-features">
+                    Features
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Diary -->
+            <div class="col-6 col-md-3">
+
+              <div class="category-card shadow-sm">
+
+                <div class="img-wrapper">
+                  <img src="diaries.jpg" alt="Diary">
+                </div>
+
+                <div class="badge-positioner">
+                  <span class="type-badge bg-diary">Diary</span>
+                </div>
+
+                <div class="card-body text-center">
+
+                  <h5 class="card-title">Premium Executive</h5>
+
+                  <a href="diary/diary.html" class="btn btn-features">
+                    Features
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Calendar -->
+            <div class="col-6 col-md-3">
+
+              <div class="category-card shadow-sm">
+
+                <div class="img-wrapper">
+                  <img src="cal.png" alt="Calendar">
+                </div>
+
+                <div class="badge-positioner">
+                  <span class="type-badge bg-wallcal">All Calendars</span>
+                </div>
+
+                <div class="card-body text-center">
+
+                  <h5 class="card-title">Premium Executive</h5>
+
+                  <a href="Calendar/calendar.html" class="btn btn-features">
+                    Features
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+
+          <div class="row g-4">
+
+            <!-- Gift -->
+            <div class="col-6 col-md-3">
+
+              <div class="category-card shadow-sm">
+
+                <div class="img-wrapper">
+                  <img src="gifts.jpg" alt="Gift Items">
+                </div>
+
+                <div class="badge-positioner">
+                  <span class="type-badge bg-books">Gift Items</span>
+                </div>
+
+                <div class="card-body text-center">
+
+                  <h5 class="card-title">Premium Executive</h5>
+
+                  <a href="gift/gift.html" class="btn btn-features">
+                    Features
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-main-row">
+        <div class="footer-col-about">
+          <h5>About Us</h5>
+          <p class="footer-text">
+            Your go-to store for beautifully crafted diaries, journals, calendars, and stationery.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Useful Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="diary/diary.html">Diaries</a></li>
+            <li><a href="journal/journal.html">Journals</a></li>
+            <li><a href="Calendar/calendar.html">Calendars</a></li>
+            <li><a href="stationery/stationery.html">Stationery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-contact">
+          <h5>Contact</h5>
+          <ul class="list-unstyled footer-contact-list">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ryanacalendar.com">info@ryanacalendar.com</a></li>
+            <li><i class="fas fa-phone"></i> +92 311 252053</li>
+            <li><i class="fas fa-map-marker-alt"></i> Aptech</li>
+          </ul>
+          <button type="button" id="contactModalBtn" class="btn btn-custom-contact mt-1">Contact Us</button>
+        </div>
+
+        <div class="footer-col-newsletter">
+          <h5>Newsletter</h5>
+          <p class="footer-text mb-2">Subscribe to get updates and offers.</p>
+          <form id="newsletterForm" class="d-flex">
+            <input type="email" class="form-control footer-input" placeholder="Your email" required>
+            <button type="submit" class="btn btn-newsletter-submit">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="copyright-text">&copy; 2026 Ryana Calendar. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-icons justify-content-center justify-content-md-end">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/92311252053" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="infoContactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-purple">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Ryana Calendar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Email: <a href="mailto:info@ryanacalendar.com">info@ryanacalendar.com</a></p>
+          <p>Phone: +92 311 252053</p>
+          <p>Location: Aptech</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 900,  // Smooth window transition speed
+        once: true,     // Triggers only once while scrolling down
+        offset: 80      // Smooth trigger offset activation
+      });
+    });
+
+    // Custom Interactive Modals and Form Events
+    const contactModalBtn = document.getElementById('contactModalBtn');
+    const infoContactModal = new bootstrap.Modal(document.getElementById('infoContactModal'));
+    if (contactModalBtn) {
+      contactModalBtn.addEventListener('click', () => infoContactModal.show());
+    }
+
+    const form = document.getElementById('newsletterForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for subscribing!');
+        form.reset();
+      });
+    }
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Mock Data Catalogue mimicking your exact shop files
+    const collectionItems = [
+      { title: "Premium Executive Diary", category: "Diary", img: "Ryana Diaries.jpg", link: "diary/diary.html" },
+      { title: "Premium Desk Calendar 2026", category: "Calendar", img: "Ryana Calendar.jpg", link: "Calendar/calendar.html" },
+      { title: "Premium Luxury Journal", category: "Journal", img: "Ryana Journals.jpg", link: "journal/journal.html" },
+      { title: "Executive Stationery Pack", category: "Stationery", img: "Ryana stationery.jpg", link: "stationery/stationery.html" },
+      { title: "Deluxe Premium Gifts Set", category: "Gifts", img: "gift items.jpg", link: "gift/gift.html" }
+    ];
+
+    const searchForm = document.getElementById('modalSearchForm');
+    const searchInput = document.getElementById('modalSearchInput');
+    const resultsGrid = document.getElementById('modalResultsGrid');
+    const hintText = document.getElementById('searchPlaceholderHint');
+
+    searchForm.addEventListener('submit', function () {
+      const keyword = searchInput.value.trim().toLowerCase();
+      resultsGrid.innerHTML = ''; // Clear previous searches
+      
+      // Filter list entries based on inputs matching titles or categories
+      const matches = collectionItems.filter(item => 
+        item.title.toLowerCase().includes(keyword) || 
+        item.category.toLowerCase().includes(keyword)
+      );
+
+      if (matches.length === 0) {
+        hintText.innerHTML = `
+          <div class="text-center py-3 text-danger">
+            <i class="fa-solid fa-face-frown mb-2 fs-3"></i>
+            <p class="mb-0 fw-semibold">No products found matching "${searchInput.value}"</p>
+          </div>`;
+        hintText.classList.remove('d-none');
+        return;
+      }
+
+      // Hide default generic hint label message block
+      hintText.classList.add('d-none');
+
+      // Loop display blocks for matches
+      matches.forEach(product => {
+        const productHTML = `
+          <div class="col-6 col-sm-4">
+            <div class="modal-result-card h-100 d-flex flex-column justify-content-between p-2">
+              <div>
+                <img src="${product.img}" alt="${product.title}" class="modal-result-img rounded">
+                <span class="badge bg-light text-dark border extra-small mt-2 d-inline-block" style="font-size:0.7rem;">${product.category}</span>
+                <h6 class="fw-bold text-dark mt-1 mb-2 small" style="line-height: 1.2;">${product.title}</h6>
+              </div>
+              <a href="${product.link}" class="btn btn-view-modal btn-sm w-100 py-1.5 rounded-3 text-center text-decoration-none">View Item</a>
+            </div>
+          </div>
+        `;
+        resultsGrid.innerHTML += productHTML;
+      });
+    });
+
+    // Reset settings logic clean state block whenever modal disappears
+    const searchModalEl = document.getElementById('searchModal');
+    searchModalEl.addEventListener('hidden.bs.modal', function () {
+      searchForm.reset();
+      resultsGrid.innerHTML = '';
+      hintText.innerHTML = '<p class="small mb-0">Type your keyword above (e.g., "Diary", "Calendar") and hit Go!</p>';
+      hintText.classList.remove('d-none');
+    });
+  });
+
+  </script>
+</body>
+
+</html>

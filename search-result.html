@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Ryana Calendars</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+      background-color: #fdfbfe;
+    }
+
+    :root {
+      --primary-purple: #6f42c1;
+      --dark-purple: #4b228b;
+      --light-purple: #f3eefc;
+    }
+
+    .bg-premium-purple {
+      background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple)) !important;
+    }
+
+    .text-purple {
+      color: var(--primary-purple) !important;
+    }
+
+    .btn-purple {
+      background: linear-gradient(135deg, var(--primary-purple), var(--dark-purple));
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-purple:hover {
+      opacity: 0.9;
+      color: white;
+    }
+
+    /* Custom Search Layout Cards */
+    .result-card {
+      border-radius: 16px;
+      border: none;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(111, 66, 193, 0.15);
+    }
+
+    .result-img-wrapper {
+      height: 220px;
+      overflow: hidden;
+      background-color: #f8f9fa;
+    }
+
+    .result-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .type-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 0.75rem;
+      text-uppercase: uppercase;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 30px;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-premium-purple">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="LOGO-rc.jpg" alt="Ryana Calendars Logo" style="height:50px; width:50px;" class="me-2">
+        Ryana Calendars
+      </a>
+
+      <div class="d-flex align-items-center gap-3 order-lg-last ms-auto me-3 me-lg-0">
+        <a href="cart.html" class="nav-icon text-white fs-5 position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">
+            0
+          </span>
+        </a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Calendar/calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="diary/diary.html">Diary</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="stationery/stationery.html">Stationery</a></li>
+          <li class="nav-item"><a class="nav-link" href="gift/gift.html">Gifts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5 bg-white border-bottom">
+    <div class="container text-center">
+      <span class="text-muted text-uppercase fw-bold tracking-wider small">Search Results For</span>
+      <h2 class="fw-bold text-dark mt-1">"<span id="search-query-text" class="text-purple">...</span>"</h2>
+      <p class="text-muted mb-0" id="results-count-text">Finding matches from our collection...</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      
+      <div class="row g-4 justify-content-center" id="results-grid">
+        </div>
+
+      <div id="no-results-box" class="text-center py-5 d-none" data-aos="zoom-in">
+        <i class="fa-solid fa-magnifying-glass-blur text-muted mb-3" style="font-size: 4.5rem;"></i>
+        <h4 class="fw-bold text-secondary">No matching collections found</h4>
+        <p class="text-muted">We couldn't find anything matching your keywords. Try searching for "Diary", "Calendar", or "Journal".</p>
+        <a href="index.html" class="btn btn-purple px-4 mt-2">Back to Home</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">About Us</h5>
+          <p class="text-muted small">Your go-to store for beautifully crafted diaries, journals, calendars, and stationery items tailored to organize your life.</p>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-muted text-decoration-none">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <h5 class="fw-bold mb-3">Contact Support</h5>
+          <p class="text-muted small mb-1"><i class="fas fa-envelope me-2"></i>info@ryanacalendar.com</p>
+          <p class="text-muted small"><i class="fas fa-phone me-2"></i>+92 311 252053</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 small text-muted">&copy; 2026 Ryana Calendar. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({ duration: 800, once: true });
+
+      // 1. Mock Data Catalogue mimicking your exact shop database
+      const productsDatabase = [
+        { title: "Premium Executive Diary", category: "Diary", img: "Ryana Diaries.jpg", link: "diary/diary.html", badgeBg: "#6f42c1" },
+        { title: "Premium Desk Calendar 2026", category: "Calendar", img: "Ryana Calendar.jpg", link: "Calendar/calendar.html", badgeBg: "#ffc107 text-dark" },
+        { title: "Premium Luxury Journal", category: "Journal", img: "Ryana Journals.jpg", link: "journal/journal.html", badgeBg: "#fd7e14" },
+        { title: "Executive Stationery Pack", category: "Stationery", img: "Ryana stationery.jpg", link: "stationery/stationery.html", badgeBg: "#20c997" },
+        { title: "Deluxe Premium Gifts Set", category: "Gifts", img: "gift items.jpg", link: "gift/gift.html", badgeBg: "#d63384" }
+      ];
+
+      // 2. Parse URL parameters to extract user input text
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('query') || '';
+
+      // Update text tags on UI
+      document.getElementById('search-query-text').innerText = searchQuery;
+
+      // 3. Filtering algorithm execution
+      const filteredResults = productsDatabase.filter(product => {
+        return product.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+               product.category.toLowerCase().includes(searchQuery.toLowerCase());
+      });
+
+      const grid = document.getElementById('results-grid');
+      const countText = document.getElementById('results-count-text');
+      const noResultsBox = document.getElementById('no-results-box');
+
+      // 4. Render Layout Blocks Based on Outcomes
+      if (filteredResults.length === 0 || searchQuery.trim() === '') {
+        countText.innerText = "We found 0 matches for your query.";
+        noResultsBox.classList.remove('d-none');
+      } else {
+        countText.innerText = `We found ${filteredResults.length} beautiful items matching your choice.`;
+        
+        filteredResults.forEach((item, index) => {
+          const cardHTML = `
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="${index * 100}">
+              <div class="card result-card position-relative">
+                <div class="result-img-wrapper">
+                  <img src="${item.img}" alt="${item.title}">
+                </div>
+                <span class="type-badge" style="background-color: ${item.badgeBg.startsWith('#') ? item.badgeBg : ''};">${item.category}</span>
+                <div class="card-body text-center d-flex flex-column justify-content-between">
+                  <h5 class="fw-bold text-dark fs-6 mb-3">${item.title}</h5>
+                  <a href="${item.link}" class="btn btn-purple btn-sm w-100 py-2 rounded-3 fw-bold">View Features</a>
+                </div>
+              </div>
+            </div>
+          `;
+          grid.innerHTML += cardHTML;
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
